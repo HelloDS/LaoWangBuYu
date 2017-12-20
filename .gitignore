@@ -1,0 +1,25 @@
+# 忽略frameworks/runtime-src目录下的所有文件
+# proj.linux
+# proj.win32
+# proj.ios_mac/build/tank.xcodeproj
+# proj.android-studio/app/libs/armeabi
+# proj.android/
+# proj.ios_mac/build/
+
+*.udf
+*.properties
+*DS_Store
+# debug.log
+# project.xcworkspace/
+# xcuserdata/
+# xcschemes/
+build/
+.gradle/
+
+bin/
+gen/
+#libs/
+obj/
+
+#proj.ios_mac/tank.xcodeproj/project.xcworkspace/xcshareddata/
+Debug.win32/
