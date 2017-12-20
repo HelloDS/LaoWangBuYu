@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+     <ImageView
+        android:layout_width="300dp"
+        android:layout_height="102dp"
+        android:background="@drawable/leaf_border_top_left"
+        android:layout_gravity="center"
+	    android:padding="5dp" />
+
+        <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/logo"
+        android:layout_gravity="center"
+	    android:padding="10dp" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/btnpress"
+            android:onClick="onLoadButtonClick"
+            android:text="@string/load_interstitial" >
+        </Button>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/btnpress"
+            android:onClick="onPreloadClick"
+            android:text="@string/preload_interstitial">
+        </Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/btnpress"
+            android:onClick="onLoadVideoClick"
+            android:text="@string/load_video" >
+        </Button>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/btnpress"
+            android:onClick="onPreloadVideoClick"
+            android:text="@string/preload_video" >
+        </Button>
+    </LinearLayout>
+
+    <!--
+         Button android:layout_height="wrap_content" android:layout_width="fill_parent" android:layout_weight="0.12" android:text="Perform Test Click" android:id="@+id/button1"
+    	android:onClick="onPerformTestClick"></Button
+    -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/btnpress"
+            android:onClick="onMoreButtonClick"
+            android:text="@string/more_apps" >
+        </Button>
+
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/btnpress"
+            android:onClick="onPreloadMoreAppsClick"
+            android:text="@string/preload_more_apps" >
+        </Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/btnpress"
+            android:onClick="onVideoPrefetch"
+            android:text="@string/prefetch" >
+        </Button>
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/btnpress"
+            android:onClick="onInPlayButtonClick"
+            android:text="@string/load_inplay" >
+        </Button>
+
+        <Button
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="10dp"
+            android:layout_weight="0.5"
+            android:background="@drawable/btnpress"
+            android:onClick="onPreloadInPlayButtonClick"
+            android:text="@string/preload_inplay" >
+        </Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/inplayView"
+            android:layout_width="10dp"
+            android:layout_height="40dp"
+            android:layout_margin="20dp"
+            android:layout_weight="0.5" >
+        </ImageView>
+    </LinearLayout>
+</LinearLayout>
+
+</ScrollView>

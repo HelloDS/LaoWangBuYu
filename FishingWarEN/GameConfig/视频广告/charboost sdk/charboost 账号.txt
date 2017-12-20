@@ -1,0 +1,13 @@
+https://www.chartboost.com/signup/
+账号：1154195328@qq.com
+密码：fishingboom
+
+应用 ID：
+5a2a84e555fbf70b8d779035
+应用签名：
+4674ba9989e5b13efd6cf25e74087d1ff79b2909
+包名：com.facai.fishingboom
+
+因为chartboost的后台存在bug，更改配置的时候请联系我。
+sdk 接入帮助说明网址：https://answers.chartboost.com/zh-cn/
+                      https://answers.chartboost.com/zh-cn/child_article/%E4%B8%8B%E8%BD%BD%E5%B9%B6%E9%9B%86%E6%88%90-chartboost-sdk-%E5%88%B0-android-%E2%96%B6#showinterstitial

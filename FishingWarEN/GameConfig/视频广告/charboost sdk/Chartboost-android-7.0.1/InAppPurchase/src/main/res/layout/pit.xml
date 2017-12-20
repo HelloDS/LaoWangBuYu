@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:scrollbars="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+             <ImageView
+        android:layout_width="300dp"
+        android:layout_height="102dp"
+        android:background="@drawable/leaf_border_top_left"
+        android:layout_gravity="center"
+	    android:padding="5dp" />
+
+        <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/logo"
+        android:layout_gravity="center"
+	    android:padding="10dp" />
+
+    
+	<LinearLayout  
+	    android:layout_width="fill_parent" 
+	    android:layout_height="90dp" 
+	    android:orientation="horizontal">
+    <Button
+        android:id="@+id/buyButton"
+	    android:layout_margin="10dp" 
+	    android:layout_height="fill_parent" 
+	    android:layout_width="fill_parent" 
+ 	    android:layout_weight="0.5" 
+        android:onClick="buyClick"
+        android:background="@drawable/shape"
+        android:text="@string/buy_string" />
+
+    <Button
+        android:id="@+id/clickButton"
+	    android:layout_margin="10dp" 
+	    android:layout_height="fill_parent" 
+	    android:layout_width="fill_parent" 
+	    android:layout_weight="0.5" 
+        android:onClick="buttonClicked"
+        android:background="@drawable/shape"
+        android:text="@string/clickme_string" />
+	</LinearLayout>
+	
+
+
+	
+</LinearLayout>

@@ -1,0 +1,8 @@
+{
+  "com.amazon.sample.iap.consumable.orange" : {
+    "itemType": "CONSUMABLE",
+    "price": 10.00,
+    "title": "Orange",
+    "description": "An orange; オレンジ;橙;Una naranja;оранжевый;오렌지"
+  }
+}
