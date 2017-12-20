@@ -1,0 +1,63 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion '23.0.1'
+
+    // 让编译包的签名按照指定文件的名字去寻找 gradel.properites 文件
+    signingConfigs {
+        release {
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            //keyPassword "xxxxxxxx"
+            keyPassword RELEASE_KEY_PASSWORD
+        }
+
+        debug {
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            //keyPassword "xxxxxxxx"
+            keyPassword RELEASE_KEY_PASSWORD
+        }
+    }
+
+
+    defaultConfig {
+       // applicationId "com.deedeefun.fishingwar"
+        applicationId "com.facai.fishingboom"
+        minSdkVersion 15
+        targetSdkVersion 22
+        multiDexEnabled true
+        ndk {
+            moduleName "cocos2dcpp_shared"
+        }
+        versionCode 1
+        versionName '1.0.0'
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+    // 因为项目用了C++代码  需要jni 所以加上这句话
+    sourceSets.main {
+        jni.srcDirs = []
+        jniLibs.srcDir 'libs'
+    }
+}
+
+dependencies {
+    // 谷歌基本客户端库
+    compile 'com.google.android.gms:play-services-base:9.0.0'
+    // 谷歌账户登录
+    compile 'com.google.android.gms:play-services-auth:9.0.0'
+    // 谷歌支付
+    compile 'com.google.android.gms:play-services-wallet:9.0.0'
+
+    compile files('libs/BluePay_3.6.8.810_pro.jar')
+    compile files('libs/chartboost.jar')
+}

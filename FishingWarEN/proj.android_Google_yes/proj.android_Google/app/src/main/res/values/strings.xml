@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Fishing Boom</string>
+    <string name="google_public_key">MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqv90oJGPLb/C0SxiuRm70I6+2xR3zsMhZoe4Bx9leIOGBTubBo85vNnB9YVkqV6YwDoVeFh1/NMue68zA8JoaWsmeQwj9IyMBpjCYNhZ6xvvVYZWJJMANxpYS1EWGU9964x9ul5yP/Snm8XhJm7JtKcr2VjAoES27Hf44n8Z/c/voK9uutX5A+cBZwyMX610D9+CuGszqjSfWUmkrrnQ+5VTKIuXLp3O7HgzT7p72AypANsEuMs9x+ylv2jXzuywQTq6wXaCt35qgJCb/tNM2uXtxkfjmD1/gdvep3dZ1YQK9VuTb+zBC/8p+9p/3PfMvzHZsBZhM9yBXvMh+a9J4QIDAQAB</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">TrivialDrive</string>
+    <string name="facebook_app_id">348436532213416</string>
+    <string name="server_client_id">317598483620-3b7hfo7pl8c4ts1itclee5n83dv4dm7p.apps.googleusercontent.com</string>
+
+</resources>

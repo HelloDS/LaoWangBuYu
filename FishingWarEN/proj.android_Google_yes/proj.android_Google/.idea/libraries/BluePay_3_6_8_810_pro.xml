@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="BluePay_3.6.8.810_pro">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/BluePay_3.6.8.810_pro.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
