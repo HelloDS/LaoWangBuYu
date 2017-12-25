@@ -116,12 +116,12 @@ bool Shop::BigPaySuccess = false;
 const char *Shop::GOOGLE_PAY = "google_pay_Success";
 struct GoogleData
 {
-	const char * orderId;
-	const char * packageName;
-	const char * productId;
-	const char * purchaseTime;
-	const char * purchaseState;
-	const char * purchaseToken;
+	char * orderId;
+	char * packageName;
+	char * productId;
+	char * purchaseTime;
+	char * purchaseState;
+	char * purchaseToken;
 };
 Shop* Shop::pStaticShop = NULL;
 

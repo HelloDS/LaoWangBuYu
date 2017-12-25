@@ -79,7 +79,7 @@ public class AppActivity extends Cocos2dxActivity
 		Chartboost.onCreate(this);
 		// 缓存视频
 		Chartboost.cacheInterstitial(CBLocation.LOCATION_DEFAULT);
-
+		Chartboost.cacheRewardedVideo(CBLocation.LOCATION_GAMEOVER);
 	}
 
 
@@ -87,6 +87,7 @@ public class AppActivity extends Cocos2dxActivity
 	protected void onStart() {
 		// TODO Auto-generated method stub
 		super.onStart();
+		Chartboost.onStart(this);
 
 	}
 
@@ -103,13 +104,14 @@ public class AppActivity extends Cocos2dxActivity
 	protected void onResume() {
 		// TODO Auto-generated method stub
 		super.onResume();
-
+		Chartboost.onResume(this);
 	}
 
 	@Override
 	protected void onPause() {
 		// TODO Auto-generated method stub
 		super.onPause();
+		Chartboost.onPause(this);
 	}
 
 	@Override
@@ -117,10 +119,15 @@ public class AppActivity extends Cocos2dxActivity
 		// TODO Auto-generated method stub
 		super.onStop();
 		mJapan.onStop();
+		Chartboost.onStop(this);
 	}
 
 	@Override
-	public void onBackPressed() {
+	public void onBackPressed()
+	{
+		if (Chartboost.onBackPressed())
+			return;
+		else
 			super.onBackPressed();
 	}
 
@@ -174,9 +181,10 @@ public class AppActivity extends Cocos2dxActivity
 				 else if (msg.what == JniPlayBallHelper.MESSAGE_PURCHASE_GOOGLE_SKU)
 				{
 					int idx = msg.arg1;
-				//	mJapan.Pay(idx,"11",1);
-					Chartboost.cacheRewardedVideo(CBLocation.LOCATION_GAMEOVER);
-					Chartboost.showRewardedVideo(CBLocation.LOCATION_GAMEOVER);
+					mJapan.Pay(idx,"11",1);
+
+					 Chartboost.showRewardedVideo(CBLocation.LOCATION_GAMEOVER);
+					//Chartboost.showInterstitial(CBLocation.LOCATION_DEFAULT);
 				}
 				else if (msg.what == JniPlayBallHelper.MESSAGE_SHOW_GOOGLE_ADS)
 				{
@@ -194,9 +202,17 @@ public class AppActivity extends Cocos2dxActivity
 		JniPlayBallHelper.setmHandler(mJniHandler);
 	}
 
+	/**
+	 * Chartboost Delegates
+	 */
 
+	public ChartboostDelegate delegate = new ChartboostDelegate() {
 
-
+		@Override
+		public void didCompleteRewardedVideo(String location, int reward) {
+			Log.d(TAG, "reward===="+reward);
+		}
+	};
 
 	public void PayLoginSuccessJson(JSONObject json)
 	{
@@ -215,6 +231,7 @@ public class AppActivity extends Cocos2dxActivity
 	protected void onDestroy() {
 		// TODO Auto-generated method stub
 		super.onDestroy();
+		Chartboost.onDestroy(this);
 	}
 
 	@Override

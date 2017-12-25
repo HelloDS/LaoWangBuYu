@@ -42,12 +42,12 @@ extern "C"
 
 		struct GoogleData
 		{
-			const char * orderId;
-			const char * packageName;
-			const char * productId;
-			const char * purchaseTime;
-			const char * purchaseState;
-			const char * purchaseToken;
+			char * orderId;
+			char * packageName;
+			char * productId;
+			char * purchaseTime;
+			char * purchaseState;
+			char * purchaseToken;
 		};
 
 		GoogleData * pTempGoogleData = new GoogleData;
